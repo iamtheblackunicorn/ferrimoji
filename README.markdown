@@ -14,7 +14,7 @@ That library was called [termstyle](https://github.com/iamtheblackunicorn/termst
 To use ***Ferrimoji*** in your Rust projects, add this line to your project's `Cargo.toml`:
 
 ```TOML
-ferrimoji = { git = "https://github.com/rust-lang/regex" }
+ferrimoji = { git = "https://github.com/iamtheblackunicorn/ferrimoji" }
 ```
 
 ## USAGE
