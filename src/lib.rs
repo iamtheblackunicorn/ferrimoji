@@ -1,5 +1,12 @@
+/*
+FERRIMOJI by Alexander Abraham.
+Licensed under the MIT license.
+*/
+
 use std::collections::HashMap;
 
+/// Returns a map that returns a KV pair of
+/// curated UTF-8 emojis.
 pub fn unicode_pool() -> HashMap<String, String> {
     let mut result: HashMap<String,String> = HashMap::new();
     result.insert(String::from("grinningFace"), String::from("\u{1f600}"));
@@ -70,6 +77,9 @@ pub fn unicode_pool() -> HashMap<String, String> {
     return result;
 }
 
+/// Retrieves an emoji from the unicode pool
+/// and returns an empty string if it cannots
+/// be retrieved from the pool.
 pub fn get_emoji(name: String) -> String {
     let mut result: String = String::from("");
     let name_clone_one: String = name.clone();
@@ -81,8 +91,11 @@ pub fn get_emoji(name: String) -> String {
     return result;
 }
 
+/// Tests all method present.
+/// Iterates through the UTF-8 emoji
+/// pool and attempts to print them to the
+/// console.
 pub fn tests(){
-    println!("{:?}", unicode_pool().clone().len());
     for (key, value) in unicode_pool().clone().into_iter() {
         let msg: String = value.clone();
         if msg.len() == 0 {
@@ -92,8 +105,4 @@ pub fn tests(){
             println!("{}", msg);
         }
     }
-}
-
-fn main(){
-    tests();
 }
